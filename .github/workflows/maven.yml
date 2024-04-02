@@ -78,6 +78,7 @@ jobs:
       - name: Push Docker Image
         run: |
           docker push basani14/boardgame:latest
+          sudo chmod 666 /var/run/docker.sock
 
       - name: Kubectl Action
         uses: tale/kubectl-action@v1
